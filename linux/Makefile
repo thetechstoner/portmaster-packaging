@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-STARTURL ?= https://updates.safing.io/latest/linux_amd64/start/portmaster-start\?CI
+STARTURL ?= https://updates.safing.io/latest/linux_arm64/start/portmaster-start\?CI
 NFPM ?= nfpm
 
 .PHONY: icons test-debian test-ubuntu  nfpm.yaml
