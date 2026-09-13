@@ -122,7 +122,7 @@ check_arch() {
             x86_64 )
                 arch="amd64"
                 ;;
-            arm64 )
+            aarch64 | arm64 )
                 arch="arm64"
                 ;;
             * )
