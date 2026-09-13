@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./schema.json
 name: "portmaster"
-arch: "amd64"
+arch: "arm64"
 platform: "linux"
 version: # set by make template
 section: "default"
