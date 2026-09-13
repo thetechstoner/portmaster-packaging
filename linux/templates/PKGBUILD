@@ -8,7 +8,7 @@ pkgname=portmaster-stub-bin
 pkgver={{ index ($nfpm.version | strings.TrimPrefix "v" | strings.SplitN "-" 2) 0 }}
 pkgrel={{ index ($nfpm.version | strings.SplitN "-" 2) 1 }}
 pkgdesc='Privacy Suite and Firewall: Installer to download the current binaries'
-arch=('x86_64')
+arch=('arm64')
 url='https://safing.io/portmaster'
 license=('AGPL3')
 depends=()
@@ -18,7 +18,7 @@ options=('!strip')
 provides=('portmaster')
 conflicts=('portmaster')
 install=arch.install
-source=("portmaster-start::https://updates.safing.io/linux_amd64/start/portmaster-start_v${pkgver//./-}"
+source=("portmaster-start::https://updates.safing.io/linux_arm64/start/portmaster-start_v${pkgver//./-}"
 		'portmaster.desktop'
 		'portmaster_notifier.desktop'
 		'portmaster_logo.png'
