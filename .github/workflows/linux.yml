@@ -28,10 +28,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install nfpm@latest
-        run: curl -o /tmp/nfpm.tar.gz -sSL https://github.com/goreleaser/nfpm/releases/download/v2.7.1/nfpm_2.7.1_Linux_x86_64.tar.gz && cd /tmp && tar xf /tmp/nfpm.tar.gz && sudo mv nfpm /usr/local/bin && sudo chmod a+x /usr/local/bin/nfpm
+        run: curl -o /tmp/nfpm.tar.gz -sSL https://github.com/goreleaser/nfpm/releases/download/v2.7.1/nfpm_2.7.1_Linux_arm64.tar.gz && cd /tmp && tar xf /tmp/nfpm.tar.gz && sudo mv nfpm /usr/local/bin && sudo chmod a+x /usr/local/bin/nfpm
 
       - name: Install gomplate
-        run: sudo curl -o /usr/local/bin/gomplate -sSL https://github.com/hairyhenderson/gomplate/releases/download/v3.10.0/gomplate_linux-amd64 && sudo chmod +x /usr/local/bin/gomplate
+        run: sudo curl -o /usr/local/bin/gomplate -sSL https://github.com/hairyhenderson/gomplate/releases/download/v3.10.0/gomplate_linux-arm64 && sudo chmod +x /usr/local/bin/gomplate
 
       - name: Build packages
         run: make all
@@ -159,8 +159,8 @@ jobs:
           - debian:unstable
           - debian:oldstable
           - debian:testing
-          - linuxmintd/mint20-amd64
-          - linuxmintd/mint19-amd64
+          - linuxmintd/mint20-arm64
+          - linuxmintd/mint19-arm64
     needs: build
     steps:
       - uses: actions/download-artifact@v2
